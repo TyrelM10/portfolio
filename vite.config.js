@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import preload from "vite-plugin-preload";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/tyrelmenezes_portfolio/',
-  plugins: [react()],
+  plugins: [react(), preload()],
 })
