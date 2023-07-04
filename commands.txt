@@ -6,3 +6,8 @@
 --> Visit tailwindcss.com and read DOCS to understand the css better.
 --> npm install --legacy-peer-deps -D tailwindcss postcss autoprefixer
 --> npx tailwindcss init -p
+
+--> npm run build
+--> git add dist -f
+--> git commit -m 'Adding DIST Again'
+--> git subtree push --prefix dist origin gh-pages
