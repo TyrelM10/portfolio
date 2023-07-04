@@ -24,16 +24,8 @@ import pythonp from "./tech/python.png";
 import flaskp from "./tech/flask.png";
 import djangop from "./tech/django.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import technokart from "./company/technokart.png";
 import moons from "./company/63moons.png";
-
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 
 export {
   logo,
@@ -57,13 +49,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   technokart,
   moons,
   pythonp,
