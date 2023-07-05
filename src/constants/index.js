@@ -1,7 +1,8 @@
 import {
-  mobile,
-  backend,
-  creator,
+  ai_eng,
+  consultant,
+  mern,
+  chatbot,
   web,
   javascript,
   pythonp,
@@ -49,23 +50,23 @@ const services = [
   },
   {
     title: "Chat Bot Developer",
-    icon: backend,
+    icon: chatbot,
   },
   {
     title: "React Native Developer",
-    icon: mobile,
+    icon: reactjs,
   },
   {
     title: "AI Engineer",
-    icon: creator,
+    icon: ai_eng,
   },
   {
     title: "MERN Stack Developer",
-    icon: creator,
+    icon: mern,
   },
   {
     title: "Consultant",
-    icon: creator,
+    icon: consultant,
   },
 ];
 

@@ -222,3 +222,11 @@
     width: 100% !important;
 }
 }
+
+.titles-element{
+  border-radius: 50px !important;
+  display: flex !important;
+  justify-content: center !important;
+  width: 25% !important;
+}
+

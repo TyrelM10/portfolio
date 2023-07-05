@@ -1,11 +1,12 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
+import ai_eng from "./ai_eng.svg";
+import consultant from "./consultant.png";
+import mern from "./mern.png";
 import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import chatbot from "./chat-bot.svg"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -29,9 +30,10 @@ import moons from "./company/63moons.png";
 
 export {
   logo,
-  backend,
-  creator,
-  mobile,
+  chatbot,
+  ai_eng,
+  consultant,
+  mern,
   web,
   github,
   menu,
