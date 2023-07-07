@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TYREL MENEZES | PORTFOLIO</title>
     <style>
-      body {
-        background-color: #222;
+      #canvas {
+        display: block;
       }
-      #preloader {
+      body {
+        display: flex;
+        justify-content: center;
+        background-image: #000000;
+      }
+      /* #preloader {
         position: fixed;
         top: 0;
         left: 0;
@@ -26,7 +31,8 @@
         margin: -75px 0 0 -75px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #9370db;
+        border-top-color: #87d7ed;
+        -webkit-animation: spin 2s linear infinite;
         animation: spin 2s linear infinite;
       }
       #loader:before {
@@ -38,7 +44,8 @@
         bottom: 5px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #ba55d3;
+        border-top-color: #ff0000;
+        -webkit-animation: spin 3s linear infinite;
         animation: spin 3s linear infinite;
       }
       #loader:after {
@@ -50,32 +57,191 @@
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #ff00ff;
+        border-top-color: #fffb00;
+        -webkit-animation: spin 1.5s linear infinite;
         animation: spin 1.5s linear infinite;
       }
-      @keyframes spin {
+      @-webkit-keyframes spin {
         0% {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
           transform: rotate(0deg);
         }
         100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
           transform: rotate(360deg);
         }
       }
+      @keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      } */
     </style>
     <script
       type="module"
       crossorigin=""
-      src="/tyrelmenezes_portfolio/assets/index-077d79e8.js"
+      src="/tyrelmenezes_portfolio/assets/index-50ccd5b8.js"
     ></script>
     <link
       rel="stylesheet"
-      href="/tyrelmenezes_portfolio/assets/index-2b79432f.css"
+      href="/tyrelmenezes_portfolio/assets/index-0eaaa97d.css"
     />
   </head>
   <body>
-    <div id="preloader">
+    <!-- <div id="preloader">
       <div id="loader"></div>
-    </div>
+    </div> -->
+    <canvas id="canvas"></canvas>
     <div id="root"></div>
+
+    <script>
+      var w, h, loopId, id, canvas, ctx, particles;
+
+      var options = {
+        particleColor: "rgba(255,255,255)",
+        lineColor: "rgba(0,181,255)",
+        particleAmount: 40,
+        defaultRadius: 2,
+        variantRadius: 2,
+        defaultSpeed: 1,
+        variantSpeed: 1,
+        linkRadius: 300,
+      };
+
+      var rgb = options.lineColor.match(/\d+/g);
+
+      document.addEventListener("DOMContentLoaded", init);
+
+      function init() {
+        canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+        resizeReset();
+        initialiseElements();
+        startAnimation();
+      }
+
+      function resizeReset() {
+        w = canvas.width = window.innerHeight;
+        h = canvas.height = window.innerHeight;
+      }
+
+      function initialiseElements() {
+        particles = [];
+        for (var i = 0; i < options.particleAmount; i++) {
+          particles.push(new Particle());
+        }
+      }
+
+      function startAnimation() {
+        loopId = requestAnimationFrame(animationLoop);
+      }
+
+      function animationLoop() {
+        ctx.clearRect(0, 0, w, h);
+        drawScene();
+
+        id = requestAnimationFrame(animationLoop);
+      }
+
+      function drawScene() {
+        drawLine();
+        drawParticle();
+      }
+
+      function drawParticle() {
+        for (var i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw();
+        }
+      }
+
+      function drawLine() {
+        for (var i = 0; i < particles.length; i++) {
+          linkPoints(particles[i], particles);
+        }
+      }
+
+      function linkPoints(point, hubs) {
+        for (var i = 0; i < hubs.length; i++) {
+          var distance = checkDistance(point.x, point.y, hubs[i].x, hubs[i].y);
+          var opacity = 1 - distance / options.linkRadius;
+          if (opacity > 0) {
+            ctx.lineWidth = 0.5;
+            ctx.strokeStyle =
+              "rgba(" +
+              rgb[0] +
+              "," +
+              rgb[1] +
+              "," +
+              rgb[2] +
+              "," +
+              opacity +
+              ")";
+            ctx.beginPath();
+            ctx.moveTo(point.x, point.y);
+            ctx.lineTo(hubs[i].x, hubs[i].y);
+            ctx.closePath();
+            ctx.stroke();
+          }
+        }
+      }
+
+      function checkDistance(x1, y1, x2, y2) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+      }
+
+      Particle = function () {
+        var _this = this;
+
+        _this.x = Math.random() * w;
+        _this.y = Math.random() * h;
+        _this.color = options.particleColor;
+        _this.radius =
+          options.defaultRadius + Math.random() * options.variantRadius;
+        _this.speed =
+          options.defaultSpeed + Math.random() * options.variantSpeed;
+        _this.directionAngle = Math.floor(Math.random() * 360);
+        _this.vector = {
+          x: Math.cos(_this.directionAngle) * _this.speed,
+          y: Math.sin(_this.directionAngle) * _this.speed,
+        };
+
+        _this.update = function () {
+          _this.border();
+          _this.x += _this.vector.x;
+          _this.y += _this.vector.y;
+        };
+
+        _this.border = function () {
+          if (_this.x >= w || _this.x <= 0) {
+            _this.vector.x *= -1;
+          }
+          if (_this.y >= h || _this.y <= 0) {
+            _this.vector.y *= -1;
+          }
+          if (_this.x > w) _this.x = w;
+          if (_this.y > h) _this.y = h;
+          if (_this.x < 0) _this.x = 0;
+          if (_this.y < 0) _this.y = 0;
+        };
+
+        _this.draw = function () {
+          ctx.beginPath();
+          ctx.arc(_this.x, _this.y, _this.radius, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.fillStyle = _this.color;
+          ctx.fill();
+        };
+      };
+    </script>
   </body>
 </html>
