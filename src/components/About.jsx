@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
+import { profile_img } from "../assets";
 
 const ServiceCard = ({ index, title, icon, IsMobile }) => {
   // console.log("IN MOBILE VIEW :", IsMobile);
@@ -98,8 +99,8 @@ const About = () => {
         ))}
         </div>
         <img 
-       src="/src/assets/tyrelprofile.png"
-       alt="profile_image"
+       src={profile_img}
+       alt="profileimage"
        className={IsMobile ? "w-[60%] rounded-[30px] mt-5 border-[5px] border-black drop-shadow-md flex justify-center items-center" :"w-[30%] rounded-[30px] mt-5 border-[5px] border-black drop-shadow-md flex items-center"}/>
       </div>
       

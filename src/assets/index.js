@@ -28,6 +28,8 @@ import djangop from "./tech/django.png";
 import technokart from "./company/technokart.png";
 import moons from "./company/63moons.png";
 
+import profile_img from "./profile.png"
+
 export {
   logo,
   chatbot,
@@ -56,4 +58,5 @@ export {
   pythonp,
   flaskp,
   djangop,
+  profile_img,
 };
