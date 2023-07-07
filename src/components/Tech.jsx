@@ -1,5 +1,5 @@
 import React from "react";
-import { BallCanvas } from "./canvas";
+// import { BallCanvas } from "./canvas";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -31,14 +31,20 @@ const Tech = () => {
           <p className={styles.sectionSubText}>Listing My IT Skills</p>
           <h2 className={styles.sectionHeadText}>My Skills</h2>
         </motion.div>
-        <div className="flex flex-row flex-wrap justify-center gap-10">
+        <div className="flex flex-row flex-wrap grid grid-cols-8 py-5 justify-center gap-10">
           {technologies.map((technology) => (
             <div
-              className="w-28 h-28"
+              // className="w-28 h-28"
+              className="w-30 h-30 flex flex-col flex-wrap justify-stretch items-center"
               key={technology.name}
-              style={{ display: "inline-grid" }}
+              // style={{ display: "inline-grid" }}
             >
-              <BallCanvas icon={technology.icon}></BallCanvas>
+              {/* <BallCanvas icon={technology.icon}></BallCanvas> */}
+              <img
+                src={technology.icon}
+                alt={technology.name}
+                className="w-12 h-12 object-contain bg-white-100 rounded-[20px] py-1 px-2"
+              />
               <span>
                 <p style={{ display: "flex", justifyContent: "center" }}>
                   {technology.name}

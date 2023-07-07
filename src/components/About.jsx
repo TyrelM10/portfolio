@@ -40,7 +40,7 @@ const ServiceCard = ({ index, title, icon, IsMobile }) => {
     return (
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="titles-element items-center flex flex-col"
+        className="w-[25%] flex flex-col items-center"
       >
         <img
           src={icon}
@@ -86,8 +86,8 @@ const About = () => {
           chatbots and web development in Flask and Django.
         </motion.p>
       </motion.div>
-
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className= {IsMobile? "flex flex-col-reverse flex-wrap gap-10 justify-center items-center" :"flex flex-wrap gap-10 justify-center items-center"}>
+        <div className={IsMobile ? "flex flex-wrap items-center gap-10":"mt-5 grid grid-cols-3 gap-10"}>
         {services.map((service, index) => (
           <ServiceCard
             key={service.title}
@@ -96,7 +96,13 @@ const About = () => {
             IsMobile={IsMobile}
           />
         ))}
+        </div>
+        <img 
+       src="/src/assets/tyrelprofile.png"
+       alt="profile_image"
+       className={IsMobile ? "w-[60%] rounded-[30px] mt-5 border-[5px] border-black drop-shadow-md flex justify-center items-center" :"w-[30%] rounded-[30px] mt-5 border-[5px] border-black drop-shadow-md flex items-center"}/>
       </div>
+      
     </>
   );
 };

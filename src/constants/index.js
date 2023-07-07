@@ -61,7 +61,7 @@ const services = [
     icon: ai_eng,
   },
   {
-    title: "MERN Stack Developer",
+    title: "MERN Developer",
     icon: mern,
   },
   {

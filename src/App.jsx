@@ -3,12 +3,13 @@ import { useState } from "react";
 import { About, Contact , Experience, Feedbacks, Hero, Navbar, StarsCanvas, Tech, Works } from './components';
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const spinner = document.getElementById('preloader');
-
+  const spinner = document.getElementById('canvas');
+  const main = document.getElementsByTagName("body")[0].style;
   if(spinner){
     setTimeout(()=>{
       spinner.style.display = "none";
-      setLoading(false);}, 2000);
+      main.display = "block";
+      setLoading(false);}, 5000);
     }
   return (
     !loading && (
@@ -21,7 +22,7 @@ const App = () => {
     <About/>
     <Experience/>
     <Tech/>
-    {/* <Works/> */}
+    <Works/>
     {/* <Feedbacks/> */}
     <div className="relative z-0">
     <Contact/>
