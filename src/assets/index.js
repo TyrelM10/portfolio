@@ -28,7 +28,9 @@ import djangop from "./tech/django.png";
 import technokart from "./company/technokart.png";
 import moons from "./company/63moons.png";
 
-import profile_img from "./profile.png"
+import profile_img from "./profile.png";
+import unilogoms from "./unilogoms.jpeg";
+import unimu from "./unimu.jpeg";
 
 export {
   logo,
@@ -59,4 +61,6 @@ export {
   flaskp,
   djangop,
   profile_img,
+  unilogoms,
+  unimu,
 };

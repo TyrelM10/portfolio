@@ -12,6 +12,8 @@ const StarWrapper = (Component, idName) =>
       classNames.push("bg-experience");
     } else if (idName === "tech") {
       classNames.push("bg-tech");
+    } else if (idName === "education") {
+      classNames.push("bg-edu");
     }
 
     return (

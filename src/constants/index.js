@@ -22,6 +22,8 @@ import {
   threejs,
   technokart,
   moons,
+  unilogoms,
+  unimu,
 } from "../assets";
 
 export const navLinks = [
@@ -217,6 +219,25 @@ const testimonials = [
   },
 ];
 
+const degrees = [
+  {
+    date: "JANUARY, 2023 - MAY, 2024",
+    logo: unilogoms,
+    type: "Masters In Artificial Intelligence",
+    school: "The School of Natural and Computing Science",
+    uni: "University Of Aberdeen",
+    description: "Course content overview: Subjects include NLG, Coding in Python, PDDL and Prolog, Data Mining and Machine Learning.",
+  },  
+  {
+    date: "JULY, 2014 - MAY, 2018",
+    logo: unimu,
+    type: "Bachelor of Engineering in Electronics and Telecommunication.",
+    school: "Don Bosco Institute of Technology",
+    uni: "University of Mumbai",
+    description: "Course content overview: Subjects learnt included Artificial Neural Networks, Image Processing and Speech Processing. Final Year Project: Cryptography Using Artificial Neural Networks.",
+  },
+];
+
 const projects = [
   // {
   //   name: "Car Rent",
@@ -283,4 +304,4 @@ const projects = [
   // },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, degrees };

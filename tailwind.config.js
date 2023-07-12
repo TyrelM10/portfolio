@@ -22,7 +22,8 @@ module.exports = {
         "hero-pattern": "url('/src/assets/background_image.gif')",
         "about-me": "linear-gradient(to right, #0f0c29, #302b63 , #24243e)",
         "experience": "linear-gradient(to top, #00416a, #e4e5e6)",
-        "tech":"linear-gradient(to bottom, #200122, #290301)"
+        "tech":"linear-gradient(to bottom, #200122, #290301)",
+        "edu":"linear-gradient(to bottom, #200122, #290301)",
       },
     },
   },

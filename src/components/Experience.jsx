@@ -10,7 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+// import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -50,11 +50,11 @@ const ExperienceCard = ({ experience }) => (
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant(0)}>
+      <motion.div>
         <p className={styles.sectionSubExText}>What I have done so far</p>
         <h2 className={styles.sectionHeadExText}>Work Experience</h2>
       </motion.div>
-      <div className="mt-20 flex flex-col">
+      <div className="mt-2 flex flex-col">
         <VerticalTimeline 
         lineColor={"#100d25"}
         /*layout='1-column-left'*/>

@@ -223,3 +223,10 @@
 }
 }
 
+span[class~="cursor-pointer"] {
+ display: none !important;
+}
+
+/* button[class~="disabled:pointer-events-none"]{
+  display: none !important;
+} */
