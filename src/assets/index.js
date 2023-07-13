@@ -32,6 +32,9 @@ import profile_img from "./profile.png";
 import unilogoms from "./unilogoms.jpeg";
 import unimu from "./unimu.jpeg";
 
+// Projects 
+import todoapp from "./projects/todoapp.png";
+
 export {
   logo,
   chatbot,
@@ -63,4 +66,5 @@ export {
   profile_img,
   unilogoms,
   unimu,
+  todoapp,
 };
