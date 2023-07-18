@@ -5,9 +5,10 @@ import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { degrees } from "../constants";
 import { useState, useEffect } from "react";
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 // CAROUSEL CARD CODE //
-import { Carousel } from "@material-tailwind/react";
+// import { Carousel } from "@material-tailwind/react";
+import { Carousel } from "react-responsive-carousel";
 
 
 
@@ -42,7 +43,7 @@ const Card = ({ degrees, IsMobile }) => {
       </div>
     ));
   } else {
-    return (<Carousel className="rounded-xl" autoplay={true} loop={true}>
+    return (<Carousel className="rounded-xl" autoplay={true} showThumbs={false} showStatus={false}>
         {degrees.map((degree) => (
         <div className="mt-5 flex flex-col rounded-lg border border-white bg-primary md:w-xl md:flex-row justify-evenly items-center"
             key={degree.date}>

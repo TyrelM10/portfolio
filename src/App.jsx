@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
-import { About, Contact , Experience, Education, Feedbacks, Hero, Navbar, StarsCanvas, Tech, Works } from './components';
+import { About, Contact , Experience, Education, Feedbacks, Hero, Navbar, StarsCanvas, Tech, Works, Certifications } from './components';
 const App = () => {
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById('canvas');
@@ -23,6 +23,7 @@ const App = () => {
     <Education/>
     <Experience/>
     <Tech/>
+    <Certifications/>
     <Works/>
     {/* <Feedbacks/> */}
     <div className="relative z-0">

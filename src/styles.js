@@ -16,6 +16,9 @@ const styles = {
     "text-black-100 font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
   sectionSubExText:
     "sm:text-[18px] text-[14px] text-black-100 uppercase tracking-wider",
+
+  certificateDiv:
+  "m-10 flex flex-col items-center justify-center"
 };
 
 export { styles };

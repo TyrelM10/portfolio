@@ -239,6 +239,46 @@ const degrees = [
   },
 ];
 
+const certificates = [
+  {
+    title: "Building RESTful APIs with Flask",
+    image: "https://drive.google.com/uc?export=view&id=1EFh4nW0NStELPbDzB67ywen1olxOhH_z",
+  },
+  {
+    title: "Building RESTful APIs with Django",
+    image: "https://drive.google.com/uc?export=view&id=1GbRlqcyiYi1KGWaemC1lJspy5C4MqAVO",
+  },
+  {
+    title:"Building a Personal Portfolio with Django",
+    image:"https://drive.google.com/uc?export=view&id=1vaDLhA48qfNIpenqFdsD7KycD76eK0ET",
+  },
+  {
+    title:"Deploying Django Apps: Make Your Site Go Live",
+    image:"https://drive.google.com/uc?export=view&id=1116ygzwWrDhPmimF0CqaxNbovfAgoaIa",
+  },
+  {
+    title:"Django: Forms",
+    image:"https://drive.google.com/uc?export=view&id=1JSeBnh3uguQPz_TshD0RnYgTddt3DYVD",
+  },
+  {
+    title:"Flask Essential Training",
+    image:"https://drive.google.com/uc?export=view&id=1XW9wSaPhS8t_3NyZ7QY5R3jTTyMWeVh8",
+  },
+  {
+    title:"Full Stack Web Development with Flask",
+    image:"https://drive.google.com/uc?export=view&id=1UQ_SjJ_vMLa5livdXmD-ByzVpe2F1T5M",
+  },
+  {
+    title:"Learning Django (2018)",
+    image:"https://drive.google.com/uc?export=view&id=11d7ZyTsi_s-0fmIsRhp2-kxaLoNlWyit",
+  },
+  {
+    title:"Test-Driven Development in Django",
+    image:"https://drive.google.com/uc?export=view&id=1ZYTIQuOl8e-KInG-WPgTxGj97hs71NX1",
+  },
+];
+
+
 const projects = [
   {
     name: "To-Do Application In Node JS.",
@@ -310,4 +350,4 @@ const projects = [
   // },
 ];
 
-export { services, technologies, experiences, projects, degrees };
+export { services, technologies, experiences, projects, degrees, certificates };
