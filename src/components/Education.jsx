@@ -45,7 +45,7 @@ const Card = ({ degrees, IsMobile }) => {
   } else {
     return (<Carousel className="rounded-xl" autoplay={true} showThumbs={false} showStatus={false}>
         {degrees.map((degree) => (
-        <div className="mt-5 flex flex-col rounded-lg border border-white bg-primary md:w-xl md:flex-row justify-evenly items-center"
+        <div className="m-8 flex flex-col rounded-lg border border-white bg-primary md:w-xl md:flex-row justify-evenly items-center"
             key={degree.date}>
           <img
             className="h-85 w-full bg-tertiary rounded-t-lg object-fill md:h-auto md:w-60 md:rounded-none md:rounded-l-lg"

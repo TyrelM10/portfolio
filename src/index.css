@@ -227,6 +227,10 @@ span[class~="cursor-pointer"] {
  display: none !important;
 }
 
+.carousel .thumb img {
+  position: relative;
+  bottom: 10px;
+}
 /* button[class~="disabled:pointer-events-none"]{
   display: none !important;
 } */

@@ -8,7 +8,14 @@ import { useState, useEffect } from "react";
 
 const Certificates = ({ certificates, isMob }) => {
   return (
-    <Carousel className={"flex flex-col rounded-xl justify-center items-center rounded-[50px] bg-cert"} autoplay={true} width={isMob?"90%":"60%"} showThumbs={isMob?true:false} showStatus={false}>
+    <Carousel 
+    className={"flex flex-col rounded-xl justify-center items-center rounded-[50px] bg-cert"} 
+    autoplay={true} 
+    width={isMob?"90%":"60%"} 
+    thumbWidth={50} 
+    showIndicators={isMob?false:true} 
+    showThumbs={isMob?true:false} 
+    showStatus={false}>
       {certificates.map((cert) => (
         <div key={cert.title} className={isMob ?"flex flex-col justify-center items-center":styles.certificateDiv}>
           <img
