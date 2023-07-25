@@ -31,6 +31,7 @@ import moons from "./company/63moons.png";
 import profile_img from "./profile.png";
 import unilogoms from "./unilogoms.jpeg";
 import unimu from "./unimu.jpeg";
+import brainsvg from "./brain.svg";
 
 // Projects 
 import todoapp from "./projects/todoapp.png";
@@ -67,4 +68,5 @@ export {
   unilogoms,
   unimu,
   todoapp,
+  brainsvg,
 };

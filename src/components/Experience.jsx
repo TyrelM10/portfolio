@@ -57,7 +57,7 @@ const Experience = () => {
       <div className="mt-2 flex flex-col">
         <VerticalTimeline 
         lineColor={"#100d25"}
-        /*layout='1-column-left'*/>
+        layout='1-column-left'>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}

@@ -9,7 +9,7 @@ const App = () => {
     setTimeout(()=>{
       spinner.style.display = "none";
       main.display = "block";
-      setLoading(false);}, 5000);
+      setLoading(false);}, 3000);
     }
   return (
     !loading && (

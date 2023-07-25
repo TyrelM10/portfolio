@@ -205,21 +205,26 @@
 
 /* ADDED CSS */
 .vertical-timeline-element-date{
+  margin-top: 5px !important;
+  background-image: linear-gradient(to-bottom, #141e30, #243b55) !important;
+  border-radius: 50px !important;
+  border-width: 1px !important;
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+@media only screen and (min-width: 1170px){
+.vertical-timeline-element-date{
   background-image: linear-gradient(to-bottom, #141e30, #243b55) !important;
   border-radius: 50px !important;
   display: flex !important;
   justify-content: center !important;
   width: 70% !important;
-}
-
-@media only screen and (max-width: 1170px){
-  .vertical-timeline-element-date{
-    margin-top: 5px !important;
-    background-image: linear-gradient(to-bottom, #141e30, #243b55) !important;
-    border-radius: 50px !important;
-    display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
+  position: relative;
+  left: 15%;
+  margin-top:10px;
+  border-width: 1px !important;
 }
 }
 
