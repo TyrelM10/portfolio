@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { staggerContainer } from "../utils/motion";
+import { staggerContainer, slideIn } from "../utils/motion";
 
 const StarWrapper = (Component, idName) =>
   function HOC() {
@@ -17,6 +17,7 @@ const StarWrapper = (Component, idName) =>
     }
 
     return (
+      //slideIn("left", "tween", 0.2, 1)
       <motion.section
         variants={staggerContainer()}
         initial="hidden"
@@ -29,8 +30,10 @@ const StarWrapper = (Component, idName) =>
         <span className="hash-span" id={idName}>
           &nbsp;
         </span>
-
-        <Component />
+          {/* <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}> */}
+          <Component />
+          {/* </motion.div> */}
       </motion.section>
     );
   };
