@@ -32,7 +32,8 @@ import profile_img from "./profile.png";
 import unilogoms from "./unilogoms.jpeg";
 import unimu from "./unimu.jpeg";
 import brainsvg from "./brain.svg";
-
+import download from "./download.svg";
+import view from "./view_icon.png";
 // Projects 
 import todoapp from "./projects/todoapp.png";
 
@@ -69,4 +70,6 @@ export {
   unimu,
   todoapp,
   brainsvg,
+  download,
+  view
 };

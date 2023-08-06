@@ -350,4 +350,6 @@ const projects = [
   // },
 ];
 
-export { services, technologies, experiences, projects, degrees, certificates };
+const uuid = "1DhkObS-TX8ndJrI7M_jwjtCSGmsBsev-";
+
+export { services, technologies, experiences, projects, degrees, certificates, uuid };

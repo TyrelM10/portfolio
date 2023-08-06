@@ -26,16 +26,16 @@ const Card = ({ degrees, IsMobile }) => {
             alt=""
           />
           <div className="flex flex-col justify-start p-5">
-            <h4 className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+            <h4 className="mb-2 text-xl font-medium">
               {degree.type}
             </h4>
-            <span className="mb-1 text-l font-medium text-neutral-800 dark:text-neutral-50 italic">
+            <span className="mb-1 text-l font-medium italic">
               {degree.school}
             </span>
-            <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+            <p className="mb-4 text-base">
               {degree.description}
             </p>
-            <p className="text-s text-neutral-500 dark:text-neutral-300">
+            <p className="text-s">
               {degree.date}
             </p>
           </div>
