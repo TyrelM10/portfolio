@@ -46,7 +46,7 @@ const Tech = () => {
                 className="w-12 h-12 object-contain bg-white-100 rounded-[20px] py-1 px-2"
               />
               <span>
-                <p style={{ display: "flex", justifyContent: "center" }}>
+                <p style={{ display: "flex", justifyContent: "center", marginTop: "5px" }}>
                   {technology.name}
                 </p>
               </span>

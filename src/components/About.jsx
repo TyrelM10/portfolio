@@ -98,8 +98,8 @@ const About = () => {
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           I am a Python Developer currently pursuing Masters in Artificial
-          Intelligence from University of Aberdeen and has exposure in Python,
-          chatbots and web development in Flask and Django.
+          Intelligence from University of Aberdeen and I also have exposure in creating
+          Chatbots and Web development in Flask and Django.
         </motion.p>
       </motion.div>
       <div
@@ -162,16 +162,16 @@ const About = () => {
               allow="autoplay"
             ></iframe>
           </DialogBody>
-          <DialogFooter className="space-x-2 justify-center">
+          <DialogFooter className={IsMobile? "flex flex-row gap-2 justify-center": "space-x-2 justify-center"}>
             <Button className={
                 IsMobile
-                  ? "flex border w-[40%] mt-[20px] rounded-[10px] items-center justify-center gap-3"
+                  ? "flex border w-[40%] mt-[20px] rounded-[25px] items-center justify-center gap-3"
                   : "flex border m-[10px] w-[20%] rounded-[25px] items-center justify-center gap-3"
               } variant="outlined" color="red" onClick={handleOpen}>
               <img
                 src={close}
                 alt={"close"}
-                className="w-10 h-10 bg-rose-800 object-contain bg-white-100 rounded-[20px] py-1 px-2"
+                className="w-10 h-10 bg-rose-800 object-contain rounded-[20px] py-1 px-2"
               ></img>
               CLOSE
             </Button>
@@ -180,7 +180,7 @@ const About = () => {
               onClick={(e) => {window.open(`https://drive.google.com/u/1/uc?id=${uuid}&export=download`, "_blank");}}
               className={
                 IsMobile
-                  ? "flex border w-[75%] mt-[20px] bg-primary rounded-[25px] items-center justify-center gap-3"
+                  ? "flex border w-[50%] mt-[20px] bg-primary rounded-[25px] items-center justify-center gap-3"
                   : "flex border m-[10px] w-[20%] bg-primary rounded-[25px] items-center justify-center gap-3"
               }
             >

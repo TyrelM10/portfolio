@@ -287,67 +287,51 @@ const projects = [
     tags: [
       {
         name: "Nodejs",
-        color: "blue-text-gradient",
+        color: "blue",
       },
       {
         name: "mongodb",
-        color: "green-text-gradient",
+        color: "green",
       },
       {
         name: "express",
-        color: "pink-text-gradient",
+        color: "pink",
       },
       {
         name: "bootstrap",
-        color: "pink-text-gradient",
+        color: "yellow",
       },
     ],
     image: todoapp,
     source_code_link: "https://github.com/TyrelM10/node_simple_todo_application",
+    video: "1QUL5e8f283HfWfnR9rJdgDjPaQc-VFvn",
   },
-  
-  // {
-  //   name: "Job IT",
-  //   description:
-  //     "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "restapi",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "scss",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: jobit,
-  //   source_code_link: "https://github.com/",
-  // },
-  // {
-  //   name: "Trip Guide",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: tripguide,
-  //   source_code_link: "https://github.com/",
-  // },
+  {
+    name: "Simple Portfolio in Django.",
+    description:
+      "Portfolio Website in Django using Bootstrap and Material UI in frontend.",
+    tags: [
+      {
+        name: "django",
+        color: "cyan",
+      },
+      {
+        name: "bootstrap",
+        color: "yellow",
+      },
+      {
+        name: "css",
+        color: "pink",
+      },
+      {
+        name: "python",
+        color: "green",
+      },
+    ],
+    image: todoapp,
+    source_code_link: "https://github.com/TyrelM10/node_simple_todo_application",
+    video: "1QUL5e8f283HfWfnR9rJdgDjPaQc-VFvn",
+  },
 ];
 
 const uuid = "1DhkObS-TX8ndJrI7M_jwjtCSGmsBsev-";

@@ -6,6 +6,17 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useState, useEffect } from "react";
+import {
+  Chip,
+  Card,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  IconButton,
+  Typography,
+} from "@material-tailwind/react";
 
 const ProjectCard = ({
   index,
@@ -14,7 +25,25 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  video,
 }) => {
+  const [IsMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen((cur) => !cur);
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -25,7 +54,10 @@ const ProjectCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative w-full h-[230px]">
+        <Card
+          className="w-full h-[190px] cursor-pointer overflow-hidden transition-opacity hover:opacity-90"
+          onClick={handleOpen}
+        >
           <img
             src={image}
             alt={name}
@@ -44,19 +76,59 @@ const ProjectCard = ({
               />
             </div>
           </div>
-        </div>
+        </Card>
         <div className="mt-5">
-        <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-            #{tag.name}
-          </p>
-        ))}
+          {tags.map((tag) => (
+            // <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+            //   #{tag.name}
+            // </p>
+            <Chip key={tag.name} color={tag.color} value={tag.name} />
+          ))}
         </div>
       </Tilt>
+      <Dialog open={open} handler={handleOpen}>
+        <DialogHeader className="text-primary justify-between">
+          <Typography variant="h5">{name}</Typography>
+          <IconButton
+            color="blue-gray"
+            size="sm"
+            variant="text"
+            onClick={handleOpen}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              className="h-5 w-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </IconButton>
+        </DialogHeader>
+        <DialogBody divider className="h-[30rem]">
+          <video className="border-4 border-violet-900 h-full w-full rounded-lg" controls autoPlay>
+            <source src={`https://drive.google.com/uc?id=${video}`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </DialogBody>
+        <DialogFooter
+          className={
+            IsMobile
+              ? "flex flex-row gap-2 justify-center"
+              : "space-x-2 justify-center"
+          }
+        >" "</DialogFooter>
+      </Dialog>
     </motion.div>
   );
 };
