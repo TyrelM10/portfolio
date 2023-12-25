@@ -13,10 +13,10 @@ const Hero = () => {
         <div className="w-1 sm:h-80 h-40 violet-gradient"/>
       </div>
       <div>
-        <h1 className={`${styles.heroHeadText} text-white`}>Welcome to <span className="text-[#915eff]">My Portfolio</span></h1>
-        <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+        <h1 className={`${styles.heroHeadText} text-[#915eff]`}>Welcome to <span className="text-[#915eff]">My Portfolio</span></h1>
+        {/* <p className={`${styles.heroSubText} mt-2 text-[#915eff]`}>
         The key to artificial intelligence has always been the representation.
-        </p>
+        </p> */}
       </div>
       </div>
       {/* <Neural_NetworkCanvas/> */}

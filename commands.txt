@@ -11,3 +11,12 @@
 --> git add dist -f
 --> git commit -m 'Adding DIST Again'
 --> git subtree push --prefix dist origin gh-pages
+
+
+# Changes to be made on next deploys:
+
+***** 3. Try to get the entire background to star canvas for whole page.
+4. Add Other Skills component with Music and other certificates.
+5. Complete and add another project.
+6. Add component for research papers.
+7. Change color schemes finally before deploying and check ways to hide and encrypt the password and template info.

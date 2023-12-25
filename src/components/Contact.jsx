@@ -71,8 +71,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_6suwq24",
-        "template_e5ld3v9",
+        "service_6suwq2",
+        "template_e5ld3",
         {
           from_name: form.name,
           to_name: "Tyrel",
@@ -124,6 +124,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="What's your name?"
                 className="bg-tertiary py-2 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+                required
               />
             </label>
             <label className="flex flex-col">
@@ -135,6 +136,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="What's your email?"
                 className="bg-tertiary py-2 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+                required
               />
             </label>
             <label className="flex flex-col">
@@ -146,6 +148,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="What do you want to say?"
                 className="bg-tertiary py-2 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+                required
               />
             </label>
             <button
@@ -155,48 +158,6 @@ const Contact = () => {
               {loading ? "Sending...." : "Send"}
             </button>
           </form>
-          <div className={openerror ? "flex mt-5 relative z-99" : "hidden"}>
-            <Alert
-              variant="gradient"
-              open={open}
-              color="red"
-              className={
-                open ? "max-w-screen-md" : "hidden"
-              }
-              icon={<WrongIcon />}
-              onClose={() => {
-                setOpen(false);
-                setError(false);
-              }}
-            >
-              <Typography variant="h5" color="white">
-                Error
-              </Typography>
-              <Typography color="white" className="font-normal">
-                Sorry, Something went Wrong !! <br/>Please Try Again.
-              </Typography>
-            </Alert>
-          </div>
-          <div className={opensuccess ? "flex mt-5 relative z-99" : "hidden"}>
-            <Alert
-              variant="gradient"
-              open={open}
-              color="green"
-              className={open ? "max-w-screen-md" : "hidden"}
-              icon={<SuccessIcon />}
-              onClose={() => {
-                setOpen(false);
-                setSuccess(false);
-              }}
-            >
-              <Typography variant="h5" color="white">
-                Success
-              </Typography>
-              <Typography color="white" className="font-normal">
-                Thank you for Contacting. <br/>I shall get back to you. Cheers !!
-              </Typography>
-            </Alert>
-          </div>
         </motion.div>
 
         <motion.div
@@ -205,6 +166,49 @@ const Contact = () => {
         >
           <EarthCanvas />
         </motion.div>
+      </div>
+
+      <div className={openerror ? "flex mt-5 relative z-99" : "hidden"}>
+        <Alert
+          variant="gradient"
+          open={open}
+          color="red"
+          className={open ? "max-w-screen-md" : "hidden"}
+          icon={<WrongIcon />}
+          onClose={() => {
+            setOpen(false);
+            setError(false);
+          }}
+        >
+          <Typography variant="h5" color="white">
+            Error
+          </Typography>
+          <Typography color="white" className="font-normal">
+            Sorry, Something went Wrong !! <br />
+            Please Try Again.
+          </Typography>
+        </Alert>
+      </div>
+
+      <div className={opensuccess ? "flex mt-5 relative z-99" : "hidden"}>
+        <Alert
+          variant="gradient"
+          open={open}
+          color="green"
+          className={open ? "max-w-screen-md" : "hidden"}
+          icon={<SuccessIcon />}
+          onClose={() => {
+            setOpen(false);
+            setSuccess(false);
+          }}
+        >
+          <Typography variant="h5" color="white">
+            Success
+          </Typography>
+          <Typography color="white" className="font-normal">
+            Thank you for Contacting. <br />I shall get back to you. Cheers !!
+          </Typography>
+        </Alert>
       </div>
     </div>
   );

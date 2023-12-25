@@ -24,7 +24,7 @@ import {
   moons,
   unilogoms,
   unimu,
-  todoapp
+  todoapp,
 } from "../assets";
 
 export const navLinks = [
@@ -191,6 +191,19 @@ const experiences = [
       "Created a Salesforce Application for client in React Js.",
     ],
   },
+  {
+    title: "NCS Demonstrator / Python Full Stack Developer",
+    company_name: "University of Aberdeen - Natural Computing Sciences",
+    icon: unilogoms,
+    iconBg: "#383E56",
+    date: "August 2023 - November 2023",
+    points: [
+      "Created a Django Application for a client to automate forms.",
+      "Integration of any database based on Django’s ORM functionality and an API was created using serializers.",
+      "Frontend was created using Bootstrap.",
+      "The application took input from Gravity forms from the clients website.",
+    ],
+  }
 ];
 
 // const testimonials = [

@@ -16,6 +16,7 @@ import {
   DialogFooter,
   IconButton,
   Typography,
+  Collapse,
 } from "@material-tailwind/react";
 
 const ProjectCard = ({
@@ -116,8 +117,15 @@ const ProjectCard = ({
           </IconButton>
         </DialogHeader>
         <DialogBody divider className="h-[30rem]">
-          <video className="border-4 border-violet-900 h-full w-full rounded-lg" controls autoPlay>
-            <source src={`https://drive.google.com/uc?id=${video}`} type="video/mp4" />
+          <video
+            className="border-4 border-violet-900 h-full w-full rounded-lg"
+            controls
+            autoPlay
+          >
+            <source
+              src={`https://drive.google.com/uc?id=${video}`}
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </DialogBody>
@@ -127,38 +135,79 @@ const ProjectCard = ({
               ? "flex flex-row gap-2 justify-center"
               : "space-x-2 justify-center"
           }
-        >" "</DialogFooter>
+        >
+          " "
+        </DialogFooter>
       </Dialog>
     </motion.div>
   );
 };
 
 const Works = () => {
+  // --------- Collapse State Handling
+  const [open, setOpen] = useState(false);
+  const toggleOpen = () => setOpen((cur) => !cur);
+  // ---------------------------------------
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My Works</p>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
+        <div className="flex items-center" onClick={toggleOpen}>
+          <h2 className={styles.sectionHeadText}>Projects</h2>
+          {open ? (
+            <svg
+              className="ml-auto w-20 h-20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 30 30"
+              stroke="white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="ml-auto w-20 h-20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 30 30"
+              stroke="white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"
+              />
+            </svg>
+          )}
+        </div>
+        <div className="h-0 w-100 border-x-6 border-x-transparent border-b-[3px] border-b-white-1000"></div>
       </motion.div>
+      <Collapse open={!open}>
+        <div className="w-full flex">
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-3 text-secondary text-[17px] max-W-3xl leading-[30px]"
+          >
+            Following projects showcase my skills and experience through
+            real-world examples of my work. Each project is briefly described
+            with links to code repositories and live demos in it. It reflects my
+            ability to solve complex problems, work with different technologies,
+            and manage projects effectively.
+          </motion.p>
+        </div>
 
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-W-3xl leading-[30px]"
-        >
-          Following projects showcase my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
-        </motion.p>
-      </div>
-
-      <div className="mt-10 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
+        <div className="mt-10 flex flex-wrap gap-7">
+          {projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        </div>
+      </Collapse>
     </>
   );
 };
