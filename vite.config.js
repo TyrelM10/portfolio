@@ -4,6 +4,6 @@ import preload from "vite-plugin-preload";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/tyrelmenezes_portfolio/',
+  base: '/portfolio/',
   plugins: [react(), preload()],
 })
