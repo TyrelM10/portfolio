@@ -36,6 +36,15 @@ import download from "./download.svg";
 import view from "./view_icon.png";
 // Projects 
 import todoapp from "./projects/todoapp.png";
+import cert1 from "./certificates/cert1.png";
+import cert2 from "./certificates/cert2.png";
+import cert3 from "./certificates/cert3.png";
+import cert4 from "./certificates/cert4.png";
+import cert5 from "./certificates/cert5.png";
+import cert6 from "./certificates/cert6.png";
+import cert7 from "./certificates/cert7.png";
+import cert8 from "./certificates/cert8.png";
+import cert9 from "./certificates/cert9.png";
 
 export {
   logo,
@@ -71,5 +80,14 @@ export {
   todoapp,
   brainsvg,
   download,
-  view
+  view,
+  cert1,
+  cert2,
+  cert3,
+  cert4,
+  cert5,
+  cert6,
+  cert7,
+  cert8,
+  cert9
 };

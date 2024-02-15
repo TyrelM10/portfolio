@@ -25,6 +25,15 @@ import {
   unilogoms,
   unimu,
   todoapp,
+  cert1,
+  cert2,
+  cert3,
+  cert4,
+  cert5,
+  cert6,
+  cert7,
+  cert8,
+  cert9
 } from "../assets";
 
 export const navLinks = [
@@ -255,39 +264,39 @@ const degrees = [
 const certificates = [
   {
     title: "Building RESTful APIs with Flask",
-    image: "https://drive.google.com/uc?export=view&id=1EFh4nW0NStELPbDzB67ywen1olxOhH_z",
+    image: cert1,
   },
   {
     title: "Building RESTful APIs with Django",
-    image: "https://drive.google.com/uc?export=view&id=1GbRlqcyiYi1KGWaemC1lJspy5C4MqAVO",
+    image: cert2,
   },
   {
     title:"Building a Personal Portfolio with Django",
-    image:"https://drive.google.com/uc?export=view&id=1vaDLhA48qfNIpenqFdsD7KycD76eK0ET",
+    image: cert3,
   },
   {
     title:"Deploying Django Apps: Make Your Site Go Live",
-    image:"https://drive.google.com/uc?export=view&id=1116ygzwWrDhPmimF0CqaxNbovfAgoaIa",
+    image: cert4,
   },
   {
     title:"Django: Forms",
-    image:"https://drive.google.com/uc?export=view&id=1JSeBnh3uguQPz_TshD0RnYgTddt3DYVD",
+    image: cert5,
   },
   {
     title:"Flask Essential Training",
-    image:"https://drive.google.com/uc?export=view&id=1XW9wSaPhS8t_3NyZ7QY5R3jTTyMWeVh8",
+    image: cert6,
   },
   {
     title:"Full Stack Web Development with Flask",
-    image:"https://drive.google.com/uc?export=view&id=1UQ_SjJ_vMLa5livdXmD-ByzVpe2F1T5M",
+    image: cert7,
   },
   {
     title:"Learning Django (2018)",
-    image:"https://drive.google.com/uc?export=view&id=11d7ZyTsi_s-0fmIsRhp2-kxaLoNlWyit",
+    image: cert8,
   },
   {
     title:"Test-Driven Development in Django",
-    image:"https://drive.google.com/uc?export=view&id=1ZYTIQuOl8e-KInG-WPgTxGj97hs71NX1",
+    image: cert9,
   },
 ];
 
