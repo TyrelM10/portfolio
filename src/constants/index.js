@@ -151,7 +151,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Associate Developer to Team Lead",
+    title: "Associate Software Developer to Team Lead",
     company_name: "TECHNOKART CONSULTANCY SERVICES LLP",
     icon: technokart,
     iconBg: "#383E56",
@@ -164,7 +164,7 @@ const experiences = [
     ],
   },
   {
-    title: "Python Developer and Consultant",
+    title: "Software Consultant",
     company_name: "63 MOONS TECHNOLOGIES LTD",
     icon: moons,
     iconBg: "#E6DEDD",
@@ -176,7 +176,7 @@ const experiences = [
     ],
   },
   {
-    title: "Python Developer and Consultant",
+    title: "Software Consultant",
     company_name: "63 MOONS TECHNOLOGIES LTD",
     icon: moons,
     iconBg: "#E6DEDD",
@@ -188,7 +188,7 @@ const experiences = [
     ],
   },
   {
-    title: "Python Full Stack Developer / Django Developer",
+    title: "Software Developer",
     company_name: "TECHNOKART CONSULTANCY SERVICES LLP",
     icon: technokart,
     iconBg: "#383E56",
@@ -201,11 +201,11 @@ const experiences = [
     ],
   },
   {
-    title: "NCS Demonstrator / Python Full Stack Developer",
-    company_name: "University of Aberdeen - Natural Computing Sciences",
+    title: "NCS Demonstrator / Full Stack Developer",
+    company_name: "University of Aberdeen - Aberdeen Software Factory (Part Time)",
     icon: unilogoms,
     iconBg: "#383E56",
-    date: "August 2023 - November 2023",
+    date: "August 2023 - Present",
     points: [
       "Created a Django Application for a client to automate forms.",
       "Integration of any database based on Django’s ORM functionality and an API was created using serializers.",
@@ -249,7 +249,7 @@ const degrees = [
     type: "Masters In Artificial Intelligence",
     school: "The School of Natural and Computing Science",
     uni: "University Of Aberdeen",
-    description: "Course content overview: Subjects include NLG, Coding in Python, PDDL and Prolog, Data Mining and Machine Learning.",
+    description: "Course content overview: Subjects include NLG, Coding in Python, PDDL and Prolog, Data Mining and Machine Learning. Project: Building Domain Language using Natural Language Descriptions.",
   },  
   {
     date: "JULY, 2014 - MAY, 2018",
